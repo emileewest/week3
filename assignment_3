@@ -1,14 +1,42 @@
-
 # Objective: Write a program that takes a list of numbers and prints out the sum, average, and largest number in the list.
-
 
 
 # Problem 1: Write a program that takes a list of numbers and prints out the sum of all the numbers in the list.
 
+def calculate_sum(numbers):
+    total = sum(numbers)
+    return total 
+my_list = [100, 101, 300, 410, 560]
+result = calculate_sum(my_list)
+print("The sum of the list is:", result) 
 
 
 # Problem 2: Write a program that takes a list of numbers and prints out the average of all the numbers in the list.
 
+def calculate_average(numbers):
+    total_sum = sum(numbers)
+    average = total_sum / len(numbers)  
+    return average 
+my_list = [100, 101, 300, 410, 560]
+average_value = calculate_average(my_list)
+print("The average of the list is:", average_value) 
 
 
 # Problem 3: Write a program that takes a list of numbers and prints out the largest number in the list.
+
+def find_largest_number(numbers):
+
+    if not numbers:
+        return None
+    largest = numbers[0]
+    for number in numbers:
+        if number > largest:
+            largest = number
+    return largest
+numbers = [100, 101, 300, 410, 560]
+largest_number = find_largest_number(numbers)
+
+if largest_number is not None:
+    print("The largest number is:", largest_number)
+else:
+    print("The list is empty.")
